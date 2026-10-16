@@ -3,61 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>jhmle</title>
-<meta name="description" content="Small tools that run in your browser, on your own device.">
+<title>jhmle · AI projects</title>
+<meta name="description" content="Portfolio of jhmle: browser-based AI projects that run on-device.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<div class="page">
 
-<header class="top">
-  <a class="mark" href="/">jhmle</a>
-  <nav aria-label="Main">
-    <a href="/fitness/">Fitness</a>
-    <a href="https://github.com/jhmle">GitHub</a>
-  </nav>
-</header>
+  <header class="intro">
+    <h1>jhmle</h1>
+    <p class="lead">I build AI tools that run entirely in the browser, on the user's own device.</p>
+    <p class="links">
+      <a href="https://github.com/jhmle">GitHub</a>
+      <!-- Add your own links here, for example:
+      <a href="https://www.linkedin.com/in/your-name">LinkedIn</a>
+      <a href="mailto:you@example.com">Email</a> -->
+    </p>
+  </header>
 
-<main>
-  <section class="hero">
-    <h1>Small tools that run on your own device.</h1>
-    <p>Experiments that live in the browser. No accounts, no sign-up, just open a page and use it.</p>
-    <div class="hero-actions">
-      <a class="cta" href="/fitness/">Open fitness</a>
-      <span class="live"><i class="dot" aria-hidden="true"></i>Voice Studio is live</span>
-    </div>
-  </section>
+  <main>
+    <section aria-labelledby="projects">
+      <h2 id="projects">Projects</h2>
 
-  <section class="projects" aria-labelledby="proj-h">
-    <h2 id="proj-h">Projects</h2>
+      <article class="project">
+        <div class="project-head">
+          <h3>Voice Studio</h3>
+          <a class="demo" href="/fitness/">Live demo</a>
+        </div>
+        <p>A hands-free voice assistant. You talk, it listens, looks through your camera and answers out loud. The models run on your device after the first download, with no server and no sign-up.</p>
+        <ul>
+          <li>Continuous conversation loop with voice-activity detection that knows when you've finished speaking.</li>
+          <li>Multimodal input: audio and camera frames go to Gemma 4, and replies stream into speech sentence by sentence.</li>
+          <li>Runs on WebGPU with models in Web Workers, so the page stays responsive.</li>
+        </ul>
+        <p class="stack">Gemma 4 · Kokoro TTS · transformers.js · WebGPU · Web Audio API · JavaScript</p>
+      </article>
+    </section>
 
-    <a class="proj" href="/fitness/">
-      <div class="p-main">
-        <h3>Fitness</h3>
-        <p>Training tools, starting with a voice assistant you talk to out loud. It listens, looks through your camera and answers, with the AI running on your device.</p>
-      </div>
-      <ul class="p-parts">
-        <li class="on"><i class="dot" aria-hidden="true"></i><span class="name">Voice Studio</span><span class="state">Live</span></li>
-        <li><i class="dot" aria-hidden="true"></i><span class="name">More fitness tools</span><span class="state">Not built yet</span></li>
-      </ul>
-      <span class="p-open">Open</span>
-    </a>
+    <section aria-labelledby="next">
+      <h2 id="next">In progress</h2>
+      <p>Turning Voice Studio into a fitness-focused AI coach. It isn't built yet; the demo above is the foundation it will grow from.</p>
+    </section>
+  </main>
 
-    <div class="proj ghost">
-      <div class="p-main">
-        <h3>Next project</h3>
-        <p>Nothing here yet.</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="foot">
-  <span>© 2026 jhmle</span>
-  <a href="https://github.com/jhmle">github.com/jhmle</a>
-</footer>
-
+  <footer>© 2026 jhmle</footer>
+</div>
 </body>
 </html>
