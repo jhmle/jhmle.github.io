@@ -3,77 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Voice Studio · Gemma 4 + Kokoro</title>
+<title>jhmle</title>
+<meta name="description" content="Small tools that run in your browser, on your own device.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="app">
 
-  <header class="topbar">
-    <div class="brand">
-      <a class="back" href="/">Home</a>
-      <h1>Voice Studio</h1>
-      <p>Talk naturally. Gemma 4 listens, looks and answers out loud, all on your device.</p>
-    </div>
-    <div id="status" class="pill pill-idle" role="status" aria-live="polite">Models not loaded</div>
-  </header>
+<header class="top">
+  <a class="mark" href="/">jhmle</a>
+  <nav aria-label="Main">
+    <a href="/fitness/">Fitness</a>
+    <a href="https://github.com/jhmle">GitHub</a>
+  </nav>
+</header>
 
-  <section class="card" id="setup">
-    <div class="card-head">
-      <h2>Get started</h2>
-      <span class="muted small hint">Downloads once, then cached</span>
-      <span class="doneMsg">✓ Models loaded</span>
-    </div>
-    <div class="load-grid">
-      <label class="meter"><span>Gemma 4 (listens and thinks)</span><progress id="pg" max="100" value="0"></progress></label>
-      <label class="meter"><span>Kokoro (speaks)</span><progress id="pk" max="100" value="0"></progress></label>
-      <button id="load" class="btn btn-primary">Load models</button>
-    </div>
-    <p class="muted small hint">The first load downloads several GB and can take a few minutes.</p>
-  </section>
-
-  <section class="stage" id="stage" data-state="off" aria-label="Conversation">
-    <video id="cam" muted playsinline></video>
-    <div class="tint"></div>
-    <div class="center">
-      <div class="turn" id="turn"><span class="turn-dot"></span><span id="turnText">Not started</span></div>
-      <div class="orb" id="orb" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-      <h2 id="title">Ready when you are</h2>
-      <p id="hint">Load the models, then start a conversation.</p>
-      <div id="out" class="out" aria-live="polite"></div>
+<main>
+  <section class="hero">
+    <h1>Small tools that run on your own device.</h1>
+    <p>Experiments that live in the browser. No accounts, no sign-up, just open a page and use it.</p>
+    <div class="hero-actions">
+      <a class="cta" href="/fitness/">Open fitness</a>
+      <span class="live"><i class="dot" aria-hidden="true"></i>Voice Studio is live</span>
     </div>
   </section>
 
-  <div class="controls">
-    <button id="mic" class="btn btn-go" disabled><span class="ico"></span><span id="micLabel">Start conversation</span></button>
-    <button id="skip" class="btn" disabled>Skip reply</button>
-  </div>
+  <section class="projects" aria-labelledby="proj-h">
+    <h2 id="proj-h">Projects</h2>
 
-  <div class="options">
-    <label class="switch"><input type="checkbox" id="useCam"><span class="slider"></span><span>Camera</span></label>
-    <label class="switch"><input type="checkbox" id="speakOn" checked><span class="slider"></span><span>Speak replies</span></label>
-    <label class="inline"><span>Voice</span><select id="voice"></select></label>
-  </div>
+    <a class="proj" href="/fitness/">
+      <div class="p-main">
+        <h3>Fitness</h3>
+        <p>Training tools, starting with a voice assistant you talk to out loud. It listens, looks through your camera and answers, with the AI running on your device.</p>
+      </div>
+      <ul class="p-parts">
+        <li class="on"><i class="dot" aria-hidden="true"></i><span class="name">Voice Studio</span><span class="state">Live</span></li>
+        <li><i class="dot" aria-hidden="true"></i><span class="name">More fitness tools</span><span class="state">Not built yet</span></li>
+      </ul>
+      <span class="p-open">Open</span>
+    </a>
 
-  <details class="card tools">
-    <summary>More ways to send input</summary>
-    <p class="muted small">Available when no conversation is running.</p>
-    <label class="field"><span>Type a message</span>
-      <textarea id="prompt" rows="2" placeholder="Type something for Gemma to answer"></textarea>
-    </label>
-    <div class="row">
-      <button id="txt" class="btn" disabled>Send message</button>
-      <button id="up" class="btn" disabled>Upload audio or video</button>
-      <button id="sample" class="btn" disabled>Play a test clip</button>
-      <input id="file" type="file" accept="audio/*,video/*" hidden>
+    <div class="proj ghost">
+      <div class="p-main">
+        <h3>Next project</h3>
+        <p>Nothing here yet.</p>
+      </div>
     </div>
-    <div class="small muted diag-label">Diagnostics</div>
-    <pre id="dbg"></pre>
-  </details>
-</div>
-<script type="module" src="app.js"></script>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© 2026 jhmle</span>
+  <a href="https://github.com/jhmle">github.com/jhmle</a>
+</footer>
+
 </body>
 </html>
