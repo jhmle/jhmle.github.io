@@ -18,6 +18,7 @@ h2 { margin: 56px 0 16px; padding-top: 20px; border-top: 1px solid var(--line); 
 h3 { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -.02em; }
 .project-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 6px; }
 .demo { font-weight: 600; }
+.project + .project { margin-top: 40px; }
 .project p, main > section > p { margin: 8px 0; }
 ul { margin: 12px 0; padding-left: 20px; }
 li { margin: 6px 0; }
